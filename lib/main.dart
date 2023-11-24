@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: "Interactive Cares",
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.dashBoard,
+      initialRoute: Routes.splash,
       getPages: AppPages.routes,
       initialBinding: BindingsX.initialBindigs(),
       theme: AppTheme.lightTheme,
