@@ -27,6 +27,7 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
                     children: [
                       CoreTextField(
                         labelText: 'First Name',
+                        readOnly: controller.isSigningUp.value,
                         textInputAction: TextInputAction.next,
                         keyboardType: TextInputType.emailAddress,
                         controller: controller.firstNameEditingController,
@@ -35,6 +36,7 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
                       const SizedBox(height: 30),
                       CoreTextField(
                         labelText: 'Last Name',
+                        readOnly: controller.isSigningUp.value,
                         textInputAction: TextInputAction.next,
                         keyboardType: TextInputType.emailAddress,
                         controller: controller.secondNameEditingController,
@@ -44,7 +46,7 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
                       CoreTextField(
                         labelText: 'Mobile Number',
                         textInputAction: TextInputAction.next,
-                        keyboardType: TextInputType.emailAddress,
+                        keyboardType: TextInputType.phone,
                         controller: controller.mobileNumberEditingController,
                         validator: AuthValidator.phoneValidator,
                       ),
@@ -123,6 +125,7 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
                       const SizedBox(height: 20.0),
                       Obx(() => CoreFlatButton(
                             text: 'Register'.toUpperCase(),
+                            textColor: AppColors.white,
                             isGradientBg: true,
                             onPressed: controller.signUp,
                             isLoading: controller.isSigningUp.value,

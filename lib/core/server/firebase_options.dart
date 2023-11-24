@@ -44,37 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDD4Emmbi769laYvWIMCVJgzT0_D1RB-LU',
-    appId: '1:625821260762:web:773d864b8f80588434fee3',
-    messagingSenderId: '625821260762',
-    projectId: 'interactive-4b6a3',
-    authDomain: 'interactive-4b6a3.firebaseapp.com',
-    storageBucket: 'interactive-4b6a3.appspot.com',
+    apiKey: 'AIzaSyAwTegVrCiAwjULBSZdeAPV35pArpBzOeU',
+    appId: '1:285086159989:web:eb805b2dbb78dce2ee543c',
+    messagingSenderId: '285086159989',
+    projectId: 'interactive-dca81',
+    authDomain: 'interactive-dca81.firebaseapp.com',
+    storageBucket: 'interactive-dca81.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDoiYLdchCJKM3tzlRwuLaz8Woouitdmbw',
-    appId: '1:625821260762:android:2352042cc90c0bfb34fee3',
-    messagingSenderId: '625821260762',
-    projectId: 'interactive-4b6a3',
-    storageBucket: 'interactive-4b6a3.appspot.com',
+    apiKey: 'AIzaSyAmM_6IhodYZLmV17IBBa9PtY2TM-XICQ8',
+    appId: '1:285086159989:android:2c6ad73cc0fcc381ee543c',
+    messagingSenderId: '285086159989',
+    projectId: 'interactive-dca81',
+    storageBucket: 'interactive-dca81.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCjPxpcDFAMsZ-4bpMeaQ9oEA-jCxwaEtI',
-    appId: '1:625821260762:ios:2bed69fa12661e0934fee3',
-    messagingSenderId: '625821260762',
-    projectId: 'interactive-4b6a3',
-    storageBucket: 'interactive-4b6a3.appspot.com',
+    apiKey: 'AIzaSyC7OpH8k0Oas7FhfLqVN1iRJw8KbO1XMUU',
+    appId: '1:285086159989:ios:b9810444afede00cee543c',
+    messagingSenderId: '285086159989',
+    projectId: 'interactive-dca81',
+    storageBucket: 'interactive-dca81.appspot.com',
     iosBundleId: 'com.example.interactive',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCjPxpcDFAMsZ-4bpMeaQ9oEA-jCxwaEtI',
-    appId: '1:625821260762:ios:64e15bab1d83de9134fee3',
-    messagingSenderId: '625821260762',
-    projectId: 'interactive-4b6a3',
-    storageBucket: 'interactive-4b6a3.appspot.com',
+    apiKey: 'AIzaSyC7OpH8k0Oas7FhfLqVN1iRJw8KbO1XMUU',
+    appId: '1:285086159989:ios:f6f3c155b711ddf8ee543c',
+    messagingSenderId: '285086159989',
+    projectId: 'interactive-dca81',
+    storageBucket: 'interactive-dca81.appspot.com',
     iosBundleId: 'com.example.interactive.RunnerTests',
   );
 }

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "625821260762",
-    "project_id": "interactive-4b6a3",
-    "storage_bucket": "interactive-4b6a3.appspot.com"
+    "project_number": "285086159989",
+    "project_id": "interactive-dca81",
+    "storage_bucket": "interactive-dca81.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:625821260762:android:2352042cc90c0bfb34fee3",
+        "mobilesdk_app_id": "1:285086159989:android:2c6ad73cc0fcc381ee543c",
         "android_client_info": {
           "package_name": "com.example.interactive"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDoiYLdchCJKM3tzlRwuLaz8Woouitdmbw"
+          "current_key": "AIzaSyAmM_6IhodYZLmV17IBBa9PtY2TM-XICQ8"
         }
       ],
       "services": {
