@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive/feature/startUpPages/service/forget_passsword_auth.dart';
+import 'package:interactive/feature/startUpPages/data/forget_passsword_auth.dart';
 
 class ForgetPasswordController extends GetxController {
   // form key

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive/feature/startUpPages/service/login_auth.dart';
+import 'package:interactive/feature/startUpPages/data/login_auth.dart';
 
 class LoginController extends GetxController {
   // form key

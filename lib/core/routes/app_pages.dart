@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:interactive/feature/coursePlayerPage/presentation/controller/course_player_screen_controller.dart';
+import 'package:interactive/feature/coursePlayerPage/presentation/pages/course_player_screen.dart';
 import 'package:interactive/feature/dashBoard/presentation/controller/dashboard_controller.dart';
 import 'package:interactive/feature/dashBoard/presentation/pages/dashboard_screen.dart';
 import 'package:interactive/feature/startUpPages/presentation/controller/forget_password_controller.dart';
@@ -52,6 +54,16 @@ class AppPages {
       binding: BindingsBuilder(
         () => Get.lazyPut<DashBoardController>(() => DashBoardController()),
       ),
+      children: [
+        GetPage(
+          name: _Paths.videoPlayer,
+          page: () => const CoursePlayerScreen(),
+          binding: BindingsBuilder(
+                () => Get.lazyPut<CoursePlayerScreenController>(
+                    () => CoursePlayerScreenController()),
+          ),
+        ),
+      ]
     ),
   ];
 }

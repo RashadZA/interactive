@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:interactive/core/routes/app_pages.dart';
 import 'package:interactive/core/utils/design_utils.dart';
-import 'package:interactive/feature/startUpPages/service/registration_auth.dart';
+import 'package:interactive/feature/startUpPages/data/registration_auth.dart';
 
 class RegistrationController extends GetxController {
   // form key

@@ -44,7 +44,10 @@ dependencies:
   cloud_firestore: ^4.13.2
 
   # Save data
-  get_storage: ^2.1.1 
+  get_storage: ^2.1.1
+
+  # Video Player:
+  video_player: ^2.8.1
 
 dev_dependencies:
   flutter_test:
