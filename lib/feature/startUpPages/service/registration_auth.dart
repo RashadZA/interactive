@@ -33,6 +33,7 @@ class RegistrationAuth {
           .collection("users")
           .doc(signUp.user!.uid)
           .set(userModel.toMap());
+      signUp.user.sendEmailVerification();
       return success;
     } else {
       return signUp.toString();

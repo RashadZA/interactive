@@ -26,9 +26,6 @@ class RegistrationController extends GetxController {
   final TextEditingController confirmPasswordEditingController =
       TextEditingController();
 
-  RxBool checkedValue = false.obs;
-  RxBool checkboxValue = false.obs;
-
   RxBool isSigningUp = false.obs;
 
   @override
@@ -56,7 +53,8 @@ class RegistrationController extends GetxController {
         if (message != success) {
           message.errorSnackBar();
         } else {
-          "Account created successfully...".successSnackBar();
+          "Please verify your email by clicking the link we send you for continue"
+              .infoSnackBar();
           Get.offAllNamed(Routes.login);
         }
       }

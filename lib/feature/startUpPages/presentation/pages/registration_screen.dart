@@ -77,52 +77,7 @@ class RegistrationScreen extends GetWidget<RegistrationController> {
                         validator: AuthValidator.passwordValidator,
                         prefixIcon: Icons.password_outlined,
                       ),
-                      const SizedBox(height: 15.0),
-                      FormField<bool>(
-                        builder: (state) {
-                          return Column(
-                            children: <Widget>[
-                              Row(
-                                children: <Widget>[
-                                  Checkbox(
-                                    checkColor: AppColors.primaryColor,
-                                    activeColor: AppColors.white,
-                                    value: controller.checkboxValue.value,
-                                    onChanged: (value) {
-                                      controller.checkboxValue.value = value!;
-                                      state.didChange(value);
-                                    },
-                                  ),
-                                  Text(
-                                    "I accept all terms and conditions.",
-                                    style: AppTextTheme.text16.copyWith(
-                                      color: AppColors.primaryColor,
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  state.errorText ?? '',
-                                  textAlign: TextAlign.left,
-                                  style: AppTextTheme.text14
-                                      .copyWith(color: AppColors.redAccent),
-                                ),
-                              )
-                            ],
-                          ).paddingOnly(left: 20, right: 20);
-                        },
-                        validator: (value) {
-                          if (!controller.checkboxValue.value) {
-                            return 'You need to accept terms and conditions';
-                          } else {
-                            return null;
-                          }
-                        },
-                      ),
-                      const SizedBox(height: 20.0),
+                      const SizedBox(height: 30.0),
                       Obx(() => CoreFlatButton(
                             text: 'Register'.toUpperCase(),
                             textColor: AppColors.white,

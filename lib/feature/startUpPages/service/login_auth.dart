@@ -13,20 +13,16 @@ class LoginAuth {
     try {
       UserCredential login = await auth.signInWithEmailAndPassword(
           email: email, password: password);
-      print("UID : ${login.user?.uid}");
-      print("log : $login");
-      print(
-          "FirebaseAuth.instance.currentUser!.emailVerified : ${FirebaseAuth.instance.currentUser!.emailVerified}");
       if (FirebaseAuth.instance.currentUser!.emailVerified == false) {
         "Please verify your email by clicking the link we send you"
             .infoSnackBar();
+        login.user?.sendEmailVerification();
       } else {
         await FirebaseFirestore.instance
             .collection("users")
             .doc(login.user?.uid)
             .get()
             .then((value) async {
-          print("Login Data: ${value.data()}");
           // await GSServices.setUser(user: UserModel.fromMap(value.data()));
         });
         // await GSServices.setUser(user: user);
