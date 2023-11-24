@@ -2,7 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
+import 'package:interactive/core/routes/app_pages.dart';
+import 'package:interactive/core/storageService/get_storage.dart';
 import 'package:interactive/core/utils/design_utils.dart';
+import 'package:interactive/core/widgets/user_model.dart';
 
 class LoginAuth {
   // firebase
@@ -18,16 +21,15 @@ class LoginAuth {
             .infoSnackBar();
         login.user?.sendEmailVerification();
       } else {
-        await FirebaseFirestore.instance
+        DocumentSnapshot signInUser = await FirebaseFirestore.instance
             .collection("users")
             .doc(login.user?.uid)
-            .get()
-            .then((value) async {
-          // await GSServices.setUser(user: UserModel.fromMap(value.data()));
-        });
-        // await GSServices.setUser(user: user);
+            .get();
+        print("User: ${signInUser.data()}");
+        await GSServices.setUser(
+            user: UserModel.fromMap(signInUser.data() as Map<String, dynamic>));
         "Sign In Successful".successSnackBar();
-        // Get.offAllNamed(Routes.dashboard);
+        Get.offAllNamed(Routes.dashBoard);
       }
     } on FirebaseAuthException catch (error) {
       switch (error.code) {

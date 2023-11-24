@@ -24,30 +24,29 @@ class ForgetPasswordScreen extends GetWidget<ForgetPasswordController> {
                     title: 'Forget Password',
                   ),
                   const Spacer(),
-                  Form(
-                    key: controller.forgetPasswordFormKey,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CoreTextField(
-                          labelText: 'E-mail address',
-                          textInputAction: TextInputAction.done,
-                          keyboardType: TextInputType.emailAddress,
-                          controller: controller.emailEditingController,
-                          validator: AuthValidator.emailValidator,
-                        ),
-                        const SizedBox(height: 20.0),
-                        Obx(
-                          () => CoreFlatButton(
-                            text: 'Forget Password'.toUpperCase(),
-                            isGradientBg: true,
-                            onPressed: controller.signUp,
-                            isLoading: controller.isSigningUp.value,
-                          ).paddingSymmetric(horizontal: 17),
-                        ),
-                      ],
-                    ).paddingAll(20),
-                  ),
+                 Obx(() =>  Form(
+                   key: controller.forgetPasswordFormKey,
+                   child: Column(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                       CoreTextField(
+                         labelText: 'E-mail address',
+                         readOnly: controller.isSigningUp.value,
+                         textInputAction: TextInputAction.done,
+                         keyboardType: TextInputType.emailAddress,
+                         controller: controller.emailEditingController,
+                         validator: AuthValidator.emailValidator,
+                       ),
+                       const SizedBox(height: 20.0),
+                       CoreFlatButton(
+                         text: 'Forget Password'.toUpperCase(),
+                         isGradientBg: true,
+                         onPressed: controller.resetPassword,
+                         isLoading: controller.isSigningUp.value,
+                       ).paddingSymmetric(horizontal: 17),
+                     ],
+                   ).paddingAll(20),
+                 ),),
                   const Spacer(),
                 ],
               ),

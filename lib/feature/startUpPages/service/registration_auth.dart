@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:interactive/core/utils/design_utils.dart';
-import 'package:interactive/feature/startUpPages/model/user_model.dart';
+import 'package:interactive/core/widgets/user_model.dart';
 
 class RegistrationAuth {
   FirebaseFirestore firebaseFireStore = FirebaseFirestore.instance;

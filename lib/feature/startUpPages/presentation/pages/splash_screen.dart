@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:interactive/core/Utils/design_utils.dart';
 import 'package:interactive/core/routes/app_pages.dart';
+import 'package:interactive/core/storageService/get_storage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -18,8 +19,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 0),
-      () => Get.offAllNamed(Routes.login),
+      const Duration(seconds: 2),
+          () => Get.offAllNamed(Routes.login),
     );
   }
 
@@ -42,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Center(
         child: ShakeY(
           infinite: true,
-          duration: const Duration(seconds: 20),
+          duration: const Duration(seconds: 2),
           child: const CircleAvatar(
             radius: 60,
             backgroundColor: AppColors.white,
