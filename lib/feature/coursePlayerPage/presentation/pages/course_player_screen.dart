@@ -40,7 +40,7 @@ class CoursePlayerScreen extends GetWidget<CoursePlayerScreenController> {
                 children: [
                   SizedBox(
                     width: Get.width,
-                    height: orientation == Orientation.landscape ? 450 : 520,
+                    height: orientation == Orientation.landscape ? 455 : 525,
                     child: controller.videoIsLoading.isTrue
                         ? Center(
                             child: const CircularProgressIndicator()

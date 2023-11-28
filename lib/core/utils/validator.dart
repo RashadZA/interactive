@@ -45,7 +45,7 @@ class AuthValidator {
     if (value?.trim().isEmpty ?? true) return "required!";
 
     if (value != null && value.trim().length < 6) {
-      return "Password must contain at least 5 characters";
+      return "Password must contain at least 6 characters";
     }
 
     return null;

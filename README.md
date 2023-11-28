@@ -1,16 +1,36 @@
-# interactive
+# Interactive Cares Test
 
-A new Flutter project.
+# SDK
+* Flutter SDK: 3.13.5
+* Dart SDK: 3.1.2
 
-## Getting Started
+# Dependencies:
+* get: For State Management
+* animate_do: For Animation in splash
+* firebase_auth: Firebase Packages
+* firebase_core: Firebase Packages
+* cloud_firestore: Firebase Packages
+* permission_handler: For checking permission
+* path_provider: For Getting path
+* sqflite: For local database
+* video_player: For Video playing
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# Contents:
+I tried to implement clean architecture. For state management GetX used.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# The Project:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You can run this project:
+
+1. Direct on Android Studio Emulator by this [link](https://github.com/RashadZA/interactive.git)
+2. Physical Device. [Apk_link](https://drive.google.com/file/d/1BEqFp63N6ZcvtI6soiwSR_lE7sJ2E1RY/view?usp=sharing)
+
+# Permission:
+* Storage permission needed
+
+# How to Use the Project:
+* After install APK app will ask storage permission.
+* Permission is needed for only for creating DB file.
+* After permission granted data will save in DB for later use.
+* Then open Dashboard screen.
