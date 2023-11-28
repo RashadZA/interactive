@@ -37,6 +37,18 @@ class UserDataFromDatabase{
     return result;
   }
 
+  Future updateUserSignINStatusData({required String userEmail, required String signInStatus}) async {
+    Database db = await DatabaseHelper().database;
+    var row = {
+      signIn: signInStatus,
+    };
+    debugPrint("Before Updating ModuleStatus Data: $row");
+    dynamic result = await db.update(userDB, row,where: 'email = \'$userEmail\'');
+    debugPrint("After Updating ModuleStatus Data: $result");
+    getUserDetails();
+    return result;
+  }
+
 
   Future deleteUsersListTable()async{
     Database db = await DatabaseHelper().database;

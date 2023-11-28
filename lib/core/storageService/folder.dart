@@ -26,7 +26,6 @@ class Folder{
     }
     String path = (await getApplicationDocumentsDirectory()).path;
     String savePath = '$path/$localDBName';
-    print("Database save path: $savePath");
     return savePath;
   }
 

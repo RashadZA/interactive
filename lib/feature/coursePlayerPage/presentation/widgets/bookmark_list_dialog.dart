@@ -21,7 +21,7 @@ void showBookmarksDialog({required BuildContext context, required List bookmarks
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Close'),
+            child: const Text('Close'),
           ),
         ],
       );

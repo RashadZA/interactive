@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:interactive/core/storageService/local_db.dart';
-import 'package:interactive/core/widgets/user_model.dart';
 import 'package:interactive/feature/coursePlayerPage/model/module_model.dart';
 import 'package:sqflite/sqflite.dart';
 

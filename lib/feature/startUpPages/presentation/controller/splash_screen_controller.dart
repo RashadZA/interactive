@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:get/get.dart';
 import 'package:interactive/core/routes/app_pages.dart';
-import 'package:interactive/core/widgets/user_model.dart';
 import 'package:interactive/feature/startUpPages/data/user_data.dart';
 
 class SplashScreenController extends GetxController {

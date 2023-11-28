@@ -26,7 +26,6 @@ class DatabaseHelper  {
     String savePath = await folder.createDBDirectory();
     if (await File(savePath).exists()) {
       _database = await openDatabase(savePath, version: 1,onUpgrade: _upgradeDB,onDowngrade: onDatabaseDowngradeDelete);
-      // print("DB exists: $savePath");
       return _database!;
     } else {
       _database = await initializeDatabase();
@@ -36,7 +35,6 @@ class DatabaseHelper  {
 
   Future<Database> initializeDatabase() async {
     String path = await folder.createDBDirectory();
-    // print("DB Created: $path");
     var restaurantDatabase = await openDatabase(
         path, version: 1,onCreate: _createDb);
     return restaurantDatabase;

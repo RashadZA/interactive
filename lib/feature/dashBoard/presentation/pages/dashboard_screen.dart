@@ -20,6 +20,16 @@ class DashBoard extends GetWidget<DashBoardController> {
             fontWeight: FontWeight.w600,
           ),
         ),
+        actions: [
+          Obx(() => controller.isSignOut.isTrue ? defaultLoader() : IconButton(
+            onPressed: () => controller.signOut(),
+            icon: const Icon(
+              Icons.logout_outlined,
+              color: AppColors.white,
+            ),
+          ),),
+
+        ],
       ),
       body: OrientationBuilder(
         builder: (context, orientation){

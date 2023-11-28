@@ -25,8 +25,6 @@ class LoginAuth {
             .collection("users")
             .doc(login.user?.uid)
             .get();
-        print("User UID: ${login.user?.uid}");
-        print("User: ${signInUser.data()}");
         debugPrint("Login Button is pressed");
         await UserDataFromDatabase(). deleteUsersListTable();
         await UserDataFromDatabase().insertUserData(user: UserModel.fromMap(signInUser.data() as Map<String, dynamic>),signInStatus: "Yes");
