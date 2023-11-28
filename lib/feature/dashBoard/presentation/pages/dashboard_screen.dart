@@ -40,7 +40,7 @@ class DashBoard extends GetWidget<DashBoardController> {
                       height: 10,
                     ),
                     for (CourseListModel course in controller.courseList) ...[
-                      DashBoardCourseCard(courseListModel: course,onTap: (){},),
+                      DashBoardCourseCard(courseListModel: course,),
                     ],
                   ],
                 ),

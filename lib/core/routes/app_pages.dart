@@ -6,6 +6,7 @@ import 'package:interactive/feature/dashBoard/presentation/pages/dashboard_scree
 import 'package:interactive/feature/startUpPages/presentation/controller/forget_password_controller.dart';
 import 'package:interactive/feature/startUpPages/presentation/controller/login_controller.dart';
 import 'package:interactive/feature/startUpPages/presentation/controller/registration_controller.dart';
+import 'package:interactive/feature/startUpPages/presentation/controller/splash_screen_controller.dart';
 import 'package:interactive/feature/startUpPages/presentation/pages/forget_password_screen.dart';
 import 'package:interactive/feature/startUpPages/presentation/pages/login_screen.dart';
 import 'package:interactive/feature/startUpPages/presentation/pages/registration_screen.dart';
@@ -23,6 +24,9 @@ class AppPages {
     GetPage(
       name: _Paths.splash,
       page: () => const SplashScreen(),
+      binding: BindingsBuilder(
+            () => Get.lazyPut<SplashScreenController>(() => SplashScreenController()),
+      ),
     ),
     GetPage(
         name: _Paths.login,
@@ -57,7 +61,7 @@ class AppPages {
       children: [
         GetPage(
           name: _Paths.videoPlayer,
-          page: () => const CoursePlayerScreen(),
+          page: () =>  const CoursePlayerScreen(),
           binding: BindingsBuilder(
                 () => Get.lazyPut<CoursePlayerScreenController>(
                     () => CoursePlayerScreenController()),

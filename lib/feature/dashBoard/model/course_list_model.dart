@@ -1,20 +1,26 @@
 class CourseListModel {
   String? courseName;
+  String? courseModulesLength;
   String? courseDescription;
-  String? courseEnrolled;
+  String? courseKey;
+  List? courseModules;
 
   CourseListModel({
     this.courseName,
+    this.courseModulesLength,
     this.courseDescription,
-    this.courseEnrolled,
+    this.courseKey,
+    this.courseModules,
   });
 
   //receiving data from server
   factory CourseListModel.fromMap(map) {
     return CourseListModel(
       courseName: map['courseName'],
+      courseModulesLength: map['courseModulesLength'],
       courseDescription: map['courseDescription'],
-      courseEnrolled: map['courseEnrolled'],
+      courseKey: map['courseKey'],
+      courseModules: map['courseModules'],
     );
   }
 
@@ -22,8 +28,10 @@ class CourseListModel {
   Map<String, dynamic> toMap() {
     return {
       'courseName': courseName,
+      'courseModulesLength': courseModulesLength,
       'courseDescription': courseDescription,
-      'courseEnrolled': courseEnrolled,
+      'courseKey': courseKey,
+      'courseModules': courseModules,
     };
   }
 }

@@ -44,10 +44,16 @@ dependencies:
   cloud_firestore: ^4.13.2
 
   # Save data
-  get_storage: ^2.1.1
+  permission_handler: ^10.3.0
+  path_provider: ^2.0.15
+  sqflite: ^2.2.8+4
+
 
   # Video Player:
   video_player: ^2.8.1
+  rxdart: ^0.27.7
+
+  provider: ^6.1.1
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +80,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/videos/
+    - assets/videos/flutterBuildShow/
+    - assets/videos/flutterEngageCommunityTalks/
+    - assets/videos/makingAnimationsInFlutter/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

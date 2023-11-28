@@ -3,9 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:interactive/core/routes/app_pages.dart';
-import 'package:interactive/core/storageService/get_storage.dart';
 import 'package:interactive/core/utils/design_utils.dart';
 import 'package:interactive/core/widgets/user_model.dart';
+import 'package:interactive/feature/startUpPages/data/user_data.dart';
 
 class LoginAuth {
   // firebase
@@ -25,9 +25,12 @@ class LoginAuth {
             .collection("users")
             .doc(login.user?.uid)
             .get();
+        print("User UID: ${login.user?.uid}");
         print("User: ${signInUser.data()}");
-        await GSServices.setUser(
-            user: UserModel.fromMap(signInUser.data() as Map<String, dynamic>));
+        debugPrint("Login Button is pressed");
+        await UserDataFromDatabase(). deleteUsersListTable();
+        await UserDataFromDatabase().insertUserData(user: UserModel.fromMap(signInUser.data() as Map<String, dynamic>),signInStatus: "Yes");
+        await UserDataFromDatabase().getUserDetails();
         "Sign In Successful".successSnackBar();
         Get.offAllNamed(Routes.dashBoard);
       }

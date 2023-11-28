@@ -12,7 +12,6 @@ class UserModel {
     this.firstName,
     this.secondName,
     this.mobileNumber,
-    this.signIn,
   });
 
   //receiving data from server
@@ -23,7 +22,6 @@ class UserModel {
       firstName: map['firstName'],
       secondName: map['secondName'],
       mobileNumber: map['mobileNumber'],
-      signIn: map['signIn'] ?? false,
     );
   }
 
