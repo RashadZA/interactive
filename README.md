@@ -24,7 +24,7 @@ I tried to implement clean architecture. For state management GetX used.
 You can run this project:
 
 1. Direct on Android Studio Emulator by this [link](https://github.com/RashadZA/interactive.git)
-2. Physical Device. [Apk_link](https://drive.google.com/file/d/1BEqFp63N6ZcvtI6soiwSR_lE7sJ2E1RY/view?usp=sharing)
+2. Physical Device. [Apk_link](https://drive.google.com/file/d/1zkwJA8GqMcvQzJFvTMFl48cZdDqVNBAN/view?usp=sharing)
 
 # Permission:
 * Storage permission needed
